@@ -1,0 +1,30 @@
+name: abrova_sync_web
+description: The web part of abrova_sync. Apps add abrova_sync; this package is used by it in Flutter web apps.
+version: 0.1.0
+homepage: https://abrova.ir/cloud/abrova-sync
+repository: https://github.com/Abrova-co/abrova_sync_web
+publish_to: https://center.abrova.ir/api/packages/abrova/pub
+
+environment:
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  web: ^1.1.1
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    implements: abrova_sync
+    platforms:
+      web:
+        pluginClass: AbrovaSyncWeb
+        fileName: abrova_sync_web.dart
